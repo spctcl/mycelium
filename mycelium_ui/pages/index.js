@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 
 import MapViewer from '../components/MapViewer/Mapviewer'
+// import './MapViewerStyles.css';
 
 export default function Home() {
   return (
