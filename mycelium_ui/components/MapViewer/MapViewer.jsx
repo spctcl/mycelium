@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
+import { useTheme, Text } from '@nextui-org/react';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN2RyM3dudngzeXZ0cHB6In0.kma6XOVomvu4FAmhOTzllQ';
 
 export default function App() {
@@ -9,7 +11,11 @@ export default function App() {
   const [lng, setLng] = useState(-97.742600);
   const [lat, setLat] = useState(30.530410);
   const [zoom, setZoom] = useState(17);
-//   const [pitch, setPitch] = useState(40)
+
+  //nextUI
+ 
+  const { theme } = useTheme();
+
 
 // const iotDevice = {
 //     "type": "FeatureCollection",
@@ -59,7 +65,14 @@ export default function App() {
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
-      <div ref={mapContainer} className="map-container" />
+      <div ref={mapContainer} className="map-container" 
+      // css={{
+      //     color: '$blue800',
+      //     fontSize: '$tiny',
+      //     padding: '$2 $4',
+      //     borderWeights: "3px"
+      //   }}
+       />
     </div>
   );
 }
