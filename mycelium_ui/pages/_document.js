@@ -6,11 +6,7 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     return {
       ...initialProps,
-<<<<<<< HEAD
       styles: <>{initialProps.styles}</>
-=======
-      styles: [<>{initialProps.styles}</>]
->>>>>>> development
     };
   }
 
@@ -27,8 +23,4 @@ class MyDocument extends Document {
   }
 }
 
-<<<<<<< HEAD
 export default MyDocument;
-=======
-export default MyDocument;
->>>>>>> development
