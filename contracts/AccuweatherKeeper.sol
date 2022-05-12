@@ -1,11 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.7;
+pragma solidity ^0.8.0;
+import "./KeeperBase.sol";
+import "./interfaces/KeeperCompatibleInterface.sol";
 
-// KeeperCompatible.sol imports the functions from both ./KeeperBase.sol and
-// ./interfaces/KeeperCompatibleInterface.sol
-import "@chainlink/contracts/src/v0.8/KeeperCompatible.sol";
-
-contract Counter is KeeperCompatibleInterface {
+contract AccuweatherKeeper is KeeperBase, KeeperCompatibleInterface{
     /**
     * Public counter variable
     */
@@ -27,6 +25,10 @@ contract Counter is KeeperCompatibleInterface {
     function checkUpkeep(bytes calldata /* checkData */) external view override returns (bool upkeepNeeded, bytes memory /* performData */) {
         upkeepNeeded = (block.timestamp - lastTimeStamp) > interval;
         // We don't use the checkData in this example. The checkData is defined when the Upkeep was registered.
+        
+        //possible upkeep- using accuweather endpoints
+        //upkeepNeeded = (Temperature.Imperial.Value >= 90) || (RelativeHumidity > 85 && Temperature.Imperial.Value >= 90); 
+        //IsDayTime == True
     }
 
     function performUpkeep(bytes calldata /* performData */) external override {
