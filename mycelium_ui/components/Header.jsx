@@ -23,21 +23,21 @@ export default function Header(props) {
                     </Link>
                 </Button>
               </Grid>
-              <Grid>
+              <Grid xs>
                 <Button light color="primary">
                   <Link href="/devices">
                     Manage Devices
                   </Link>
                 </Button>
               </Grid>
-              <Grid>
+              <Grid xs>
               <Button light color="primary">
                 <Link href="/data">
                   My Data
                 </Link>
                 </Button>
               </Grid>
-              <Grid>
+              <Grid xs>
                 <Button light color="primary">
                   <Link href="/marketplace">
                     Marketplace

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
-
-import { useTheme, Text } from '@nextui-org/react';
+import { useTheme, Container, Text } from '@nextui-org/react';
+import { isAbsolute } from 'path';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN2RyM3dudngzeXZ0cHB6In0.kma6XOVomvu4FAmhOTzllQ';
 
@@ -46,11 +46,14 @@ export default function App() {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
+      // style: 'mapbox://styles/mapbox/streets-v11',
       style: 'mapbox://styles/multiversemuffin/cl2r8oppl003914pb85ph5vx7',
       center: [lng, lat],
       zoom: zoom
     });
   });
+
+  
 
   useEffect(() => {
     if (!map.current) return; // wait for map to initialize
@@ -62,19 +65,22 @@ export default function App() {
   });
 
   return (
-    <div>
+    <Container>
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
       <div ref={mapContainer} className="map-container" 
-      // css={{
-      //     color: '$blue800',
-      //     fontSize: '$tiny',
-      //     padding: '$2 $4',
-      //     borderWeights: "3px"
-      //   }}
+      css={{
+          color: '$blue800',
+          fontSize: '$tiny',
+          padding: '$2 $4',
+          borderWeights: "3px",
+          position: "absolute",
+          display: "block"
+
+        }}
        />
-    </div>
+    </Container>
   );
 }
 

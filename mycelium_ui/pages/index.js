@@ -1,17 +1,17 @@
 import { Container, Row, Spacer } from '@nextui-org/react';
 import MapViewer from '../components/MapViewer/Mapviewer'
 import styles from '../styles/Home.module.css'
-
+import OpenWeather from '../components/OpenWeather/OpenWeather';
 // import './MapViewerStyles.css';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Container backgroundColor="backgroundContrast">
+      <Container>
         <Spacer y={1} />
-        <Row justify="center" align="center">
+       
           <MapViewer />
-        </Row>
+          <OpenWeather />
       </Container>
     </div>
   )
