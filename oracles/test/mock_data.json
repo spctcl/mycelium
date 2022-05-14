@@ -1,0 +1,10 @@
+{
+    deviceId: "0000",
+    sensorData: [
+        {
+            unit: "wfv",
+            value: "100.0"
+
+        }
+    ]
+}
