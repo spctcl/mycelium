@@ -2,6 +2,7 @@ import { Container, Row, Spacer } from '@nextui-org/react';
 import MapViewer from '../components/MapViewer/Mapviewer'
 import styles from '../styles/Home.module.css'
 import OpenWeather from '../components/OpenWeather/OpenWeather';
+import DeviceData from '../components/DeviceData';
 // import './MapViewerStyles.css';
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
        
           <MapViewer />
           <OpenWeather />
+          <DeviceData />
       </Container>
     </div>
   )

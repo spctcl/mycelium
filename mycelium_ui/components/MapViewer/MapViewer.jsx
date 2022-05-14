@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
 import { useTheme, Container, Text } from '@nextui-org/react';
-import { isAbsolute } from 'path';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN2RyM3dudngzeXZ0cHB6In0.kma6XOVomvu4FAmhOTzllQ';
 
@@ -69,17 +68,7 @@ export default function App() {
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
-      <div ref={mapContainer} className="map-container" 
-      css={{
-          color: '$blue800',
-          fontSize: '$tiny',
-          padding: '$2 $4',
-          borderWeights: "3px",
-          position: "absolute",
-          display: "block"
-
-        }}
-       />
+      <div ref={mapContainer} className="map-container" />
     </Container>
   );
 }
