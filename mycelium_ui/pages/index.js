@@ -3,7 +3,7 @@ import MapViewer from '../components/MapViewer/Mapviewer'
 import styles from '../styles/Home.module.css'
 import OpenWeather from '../components/OpenWeather/OpenWeather';
 import DeviceData from '../components/DeviceData';
-import 'mapbox-gl/dist/mapbox-gl.css';
+
 
 export default function Home() {
   return (

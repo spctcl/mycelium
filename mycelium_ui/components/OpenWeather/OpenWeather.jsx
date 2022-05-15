@@ -7,7 +7,12 @@ const OpenWeather = () => {
   
   return (
       
-    <Container fluid>
+    <Container fluid
+    css={{ 
+      borderRadius: '$md', // radii.xs
+      border: '$space$1 solid transparent'
+    }}
+    >
     <Spacer y={2} />
         <Text size="2em">OpenWeather API</Text>
         <Spacer y={1} />

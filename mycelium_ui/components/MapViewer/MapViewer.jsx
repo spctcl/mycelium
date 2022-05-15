@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 import ReactMapboxGl, {Marker} from 'react-mapbox-gl';
 
-import { useTheme, Container, Text } from '@nextui-org/react';
+import { useTheme, Container, Text, Spacer } from '@nextui-org/react';
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN2RyM3dudngzeXZ0cHB6In0.kma6XOVomvu4FAmhOTzllQ';
 
@@ -66,11 +66,12 @@ export default function App() {
 
   return (
     <Container>
-   
-      <div ref={mapContainer} className="map-container" />
+      <div ref={mapContainer} className="map-container">
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
+      </div>
+      <Spacer y={2} />
     </Container>
   );
 }

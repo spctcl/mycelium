@@ -3,6 +3,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
+import BgAnimation from './BgAnimation';
+
 export default function Header(props) {
     return (
         <div className={styles.container}>
@@ -18,7 +20,13 @@ export default function Header(props) {
         size={60}
        
         weight="bold"
-      >Mycelium</Text>
+        // css={{
+        //   background: BgAnimation
+        // }}
+        
+      >Mycelium
+      <BgAnimation />
+      </Text>
             <Grid.Container gap={2} justify="center">
             <Grid>
                 <Button light color="primary">

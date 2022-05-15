@@ -7,7 +7,24 @@ const WeatherButton = () => {
   ]
 
   return (
-    <Card clickable bordered color="gradient" css={{ mw: "400px"}}>
+    <Card clickable bordered color="gradient"  css={{ 
+      maxWidth: "400px", // space[12]
+      borderRadius: '$xs', // radii.xs
+      border: '$space$1 solid',
+  
+
+      boxShadow: '$md', // shadows.md
+      '&:hover': {
+        background: '$blue600',
+        color: '$white600',
+      },
+      // '&:active': {
+      //   background: 'gradient',
+      // },
+      // '&:focus': {
+      //   borderColor: 'gradient',
+      // },
+    }}>
         <p>Get Local Weather Data</p>
     </Card>
   )
