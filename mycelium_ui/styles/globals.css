@@ -31,3 +31,13 @@ a {
   margin: 4px;
   border-radius: 4px;
   }
+
+
+  .marker {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+  }
+  

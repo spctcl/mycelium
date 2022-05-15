@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Spacer, Text } from '@nextui-org/react'
-import WeatherButton from '../WeatherButton'
+import WeatherButton from './WeatherButton'
 
 
 const OpenWeather = () => {
