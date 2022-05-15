@@ -11,10 +11,14 @@ export default function Header(props) {
           <meta name="description" content="Data" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Container backgroundColor="backgroundContrast">
+        <Container>
           <Spacer y={1} />
           <Row justify="left" align="center">
-            <Text h3>Mycelium</Text>
+            <Text   h1
+        size={60}
+       
+        weight="bold"
+      >Mycelium</Text>
             <Grid.Container gap={2} justify="center">
             <Grid>
                 <Button light color="primary">
