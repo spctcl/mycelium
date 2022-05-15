@@ -12,8 +12,9 @@ export default function Home() {
         <Spacer y={1} />
        
           <MapViewer />
-          <OpenWeather />
-          <DeviceData />
+            <Spacer y={4} />
+              <OpenWeather />
+                <DeviceData />
       </Container>
     </div>
   )

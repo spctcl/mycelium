@@ -16,16 +16,17 @@ export default function Header(props) {
         <Container>
           <Spacer y={1} />
           <Row justify="left" align="center">
+         
             <Text h1 size={60} 
               style={{padding: "5px",
               weight: "bold"
               }}
-        
-      >Mycelium
-      <BgAnimation />
-      </Text>
+            >Mycelium
+              <BgAnimation />
+            </Text>
+            {/* <BgAnimation /> */}
             <Grid.Container gap={2} justify="center">
-            <Grid>
+              <Grid>
                 <Button light color="primary">
                     <Link href="/">
                         Home
@@ -58,7 +59,15 @@ export default function Header(props) {
               Authenticate
             </Button>
           </Row>
+            <Row justify="center" align="center">
+            <Text h2 size={40}  style={{padding: "5px",
+              weight: "bold"
+              }}>
+                Decentralized IoT Network
+            </Text>
+            </Row>
         </Container>
+      
       </div>
     )
 }
