@@ -16,13 +16,10 @@ export default function Header(props) {
         <Container>
           <Spacer y={1} />
           <Row justify="left" align="center">
-            <Text   h1
-        size={60}
-       
-        weight="bold"
-        // css={{
-        //   background: BgAnimation
-        // }}
+            <Text h1 size={60} 
+              style={{padding: "5px",
+              weight: "bold"
+              }}
         
       >Mycelium
       <BgAnimation />
