@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
+import ReactMapboxGl, {Marker} from 'react-mapbox-gl';
 
 import { useTheme, Container, Text } from '@nextui-org/react';
 
@@ -65,10 +66,11 @@ export default function App() {
 
   return (
     <Container>
+   
+      <div ref={mapContainer} className="map-container" />
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
-      <div ref={mapContainer} className="map-container" />
     </Container>
   );
 }
