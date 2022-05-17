@@ -1,13 +1,18 @@
 {
   "name": "oracles",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "device_oracle.js",
   "author": "Erik Young",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "@ceramicnetwork/3id-did-resolver": "^2.0.0",
     "@ceramicnetwork/http-client": "^2.0.0",
+    "@ceramicnetwork/stream-caip10-link": "^2.0.0",
+    "@ceramicnetwork/stream-tile": "^2.0.0",
+    "dids": "^3.1.0",
     "dotenv": "^16.0.1",
+    "ethers": "^5.6.6",
     "key-did-resolver": "^2.0.0"
   }
 }
