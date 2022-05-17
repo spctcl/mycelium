@@ -19,18 +19,21 @@ export default function Header(props) {
           <Row justify="left" align="center">
          
           <Grid.Container gap={1} justify="full">
-            <Grid>
-            <Text h1 size={50} 
+            <Grid xs>
+            <Text h1 size={40} 
               style={{padding: "5px",
-              weight: "bold"
+              weight: "bold", justify: "center"
               }}
             >Mycelium
               <BgAnimation />
             </Text>
             </Grid>
-            {/* <BgAnimation /> */}
+
             {/* <Grid.Container gap={2} justify="center"> */}
-              <Grid>
+           
+           
+           
+              <Grid xs>
                 <Button light color="primary">
                     <Link href="/">
                         Home
@@ -67,13 +70,25 @@ export default function Header(props) {
             </Grid.Container>
           </Row>
           
-            {/* <Row justify="center" align="center">
-            <Text h2 size={40}  style={{padding: "5px",
+
+          {/* <Row>
+          <Grid.Container>
+            <Grid lg>
+              <Text h2 size={25}  style={{padding: "5px",
+              weight: "bold", justify: "center"
+              }}>
+                Decentralized IoT Network
+              </Text>
+            </Grid>
+           </Grid.Container>
+           </Row> */}
+            <Row justify="center" align="center">
+            <Text h2 size={30}  style={{padding: "5px",
               weight: "bold"
               }}>
                 Decentralized IoT Network
             </Text>
-            </Row> */}
+            </Row>
         </Container>
       
       </div>

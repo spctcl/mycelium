@@ -17,9 +17,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN
 export default function App() {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(-97.7421);
-  const [lat, setLat] = useState(30.5301);
-  const [zoom, setZoom] = useState(18.31);
+  const [lng, setLng] = useState(-97.7428);
+  const [lat, setLat] = useState(30.5303);
+  const [zoom, setZoom] = useState(19.65);
   
  
   //nextUI
@@ -63,15 +63,12 @@ export default function App() {
       zoom: zoom,
       
     });
-    const marker = new mapboxgl.Marker()
-    .setLngLat([-97.742621, 30.5304821])
-    .addTo(map.current)
 
-    // map.addSource("IoT-devices", {
-    // type: "vector",
-    // url: "mapbox://multiversemuffin.6s6xcg6a"
-    // }
-    // )
+    // const marker = new mapboxgl.Marker()
+    // // .setLngLat([-97.742621, 30.5304821])
+    // .setLngLat([-97.7421, 30.5307])
+    // .addTo(map.current)
+
   });
 
 
@@ -97,80 +94,80 @@ export default function App() {
   
 
 
-  const fetchData = useCallback(() => {
-    const geocodingClient = mbxGeocoding({
-      accessToken: mapboxgl.accessToken,
-    });
+  // const fetchData = useCallback(() => {
+  //   const geocodingClient = mbxGeocoding({
+  //     accessToken: mapboxgl.accessToken,
+  //   });
 
-    // geocoding with countries
-    return geocodingClient
-      .reverseGeocode({
-        query: [-97.742621, 30.530482],
-      })
-      .send()
-      .then((response) => {
-        const match = response.body;
-        const coordinates = match.features[0].geometry.coordinates;
-        const placeName = match.features[0].place_name;
-        const center = match.features[0].center;
+  //   // geocoding with countries
+  //   return geocodingClient
+  //     .reverseGeocode({
+  //       query: [-97.7429, 30.5306],
+  //     })
+  //     .send()
+  //     .then((response) => {
+  //       const match = response.body;
+  //       const coordinates = match.features[0].geometry.coordinates;
+  //       const placeName = match.features[0].place_name;
+  //       const center = match.features[0].center;
 
-        return {
-          type: 'Feature',
-          center: center,
-          geometry: {
-            type: 'Point',
-            coordinates: coordinates,
-          },
-          properties: {
-            description: placeName,
-          },
-        };
-      });
-  }, []);
+  //       return {
+  //         type: 'Feature',
+  //         center: center,
+  //         geometry: {
+  //           type: 'Point',
+  //           coordinates: coordinates,
+  //         },
+  //         properties: {
+  //           description: placeName,
+  //         },
+  //       };
+  //     });
+  // }, []);
 
 
 
-  useEffect(() => {
-    if (!map.current) return; // Waits for the map to initialise
+//   useEffect(() => {
+//     if (!map.current) return; // Waits for the map to initialise
    
-   const results = fetchData();
+//    const results = fetchData();
 
-   results.then((marker) => {
-     // create a HTML element for each feature
-     var el = document.createElement('div');
-     el.className = 'marker';
+//    results.then((marker) => {
+//      // create a HTML element for each feature
+//      var el = document.createElement('div');
+//      el.className = 'marker';
 
-     // make a marker for each feature and add it to the map
-     new mapboxgl.Marker(el)
-       .setLngLat(marker.geometry.coordinates)
-       .setPopup(
-         new mapboxgl.Popup({ offset: 25 }) // add popups
-           .setHTML('<p>' + marker.properties.description + '</p>')
-       )
-       .addTo(map.current);
+//      // make a marker for each feature and add it to the map
+//      new mapboxgl.Marker(el)
+//        .setLngLat(marker.geometry.coordinates)
+//        .setPopup(
+//          new mapboxgl.Popup({ offset: 15 }) // add popups
+//            .setHTML('<p>' + marker.properties.description + '</p>')
+//        )
+//        .addTo(map.current);
 
-     map.current.on('load', async () => {
-       map.current.flyTo({
-         center: marker.center,
-       });
-     });
-   });
+//      map.current.on('load', async () => {
+//        map.current.flyTo({
+//          center: marker.center,
+//        });
+//      });
+//    });
 
- }, [fetchData]);
-
-
+//  }, [fetchData]);
 
 
- useEffect(() => {
-  if (map.current) return; // initialize map only once
-  map.current = new mapboxgl.Map({
-    container: mapContainer.current,
-    // style: 'mapbox://styles/mapbox/streets-v11',
-    style: 'multiversemuffin.6s6xcg6a',
+
+
+//  useEffect(() => {
+//   if (map.current) return; // initialize map only once
+//   map.current = new mapboxgl.Map({
+//     container: mapContainer.current,
+//     // style: 'mapbox://styles/mapbox/streets-v11',
+//     style: 'multiversemuffin.6s6xcg6a',
 
   
-  });
-});
+//   });
+// });
 
 
 // map.current.addLayer(
