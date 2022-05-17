@@ -23,7 +23,16 @@
                 }
             },
             "required": [ "unit", "value" ]
+        },
+        "sensorLocation": {
+            "description": "Point for a device's location using lat, lon coordinates.",
+            "type": "array",
+            "items": {
+                "type": "number",
+            },
+            "maxItems": 2,
+            "minItems": 2
         }
     },
-    "required": [ "deviceId" ]
+    "required": [ "deviceId", "sensorData", "sensorLocation" ]
 }

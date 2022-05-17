@@ -1,10 +1,10 @@
 {
-    deviceId: "0000",
-    sensorData: [
+    "deviceId": "0000",
+    "sensorData": [
         {
-            unit: "wfv",
-            value: "100.0"
-
+            "unit": "wfv",
+            "value": 100.0
         }
-    ]
+    ],
+    "sensorLocation": [33.4612661, -111.94508195613813]
 }
