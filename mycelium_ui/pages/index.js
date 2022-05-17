@@ -3,7 +3,7 @@ import MapViewer from '../components/MapViewer/Mapviewer'
 import styles from '../styles/Home.module.css'
 import OpenWeather from '../components/OpenWeather/OpenWeather';
 import DeviceData from '../components/DeviceData';
-
+// import StaticMap from '@mapbox/mapbox-sdk/services/static';
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
             <Spacer y={4} />
               <OpenWeather />
                 <DeviceData />
+                {/* <StaticMap /> */}
       </Container>
     </div>
   )

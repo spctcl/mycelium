@@ -13,9 +13,9 @@ const OpenWeather = () => {
       border: '$space$1 solid transparent'
     }}
     >
-    <Spacer y={2} />
-        <Text size="2em">OpenWeather API</Text>
-        <Spacer y={1} />
+    <Spacer y={4} />
+        {/* <Text size="2em">OpenWeather API</Text> */}
+        {/* <Spacer y={1} /> */}
         <WeatherButton />
     </Container>
   )

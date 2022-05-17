@@ -14,18 +14,22 @@ export default function Header(props) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Container>
+        
           <Spacer y={1} />
           <Row justify="left" align="center">
          
-            <Text h1 size={60} 
+          <Grid.Container gap={1} justify="full">
+            <Grid>
+            <Text h1 size={50} 
               style={{padding: "5px",
               weight: "bold"
               }}
             >Mycelium
               <BgAnimation />
             </Text>
+            </Grid>
             {/* <BgAnimation /> */}
-            <Grid.Container gap={2} justify="center">
+            {/* <Grid.Container gap={2} justify="center"> */}
               <Grid>
                 <Button light color="primary">
                     <Link href="/">
@@ -54,18 +58,22 @@ export default function Header(props) {
                   </Link>
                 </Button>
               </Grid>
+              <Grid xs>
+            {/* </Grid.Container> */}
+                <Button color="secondary">
+                  Authenticate
+                </Button>
+              </Grid>
             </Grid.Container>
-            <Button color="secondary">
-              Authenticate
-            </Button>
           </Row>
-            <Row justify="center" align="center">
+          
+            {/* <Row justify="center" align="center">
             <Text h2 size={40}  style={{padding: "5px",
               weight: "bold"
               }}>
                 Decentralized IoT Network
             </Text>
-            </Row>
+            </Row> */}
         </Container>
       
       </div>

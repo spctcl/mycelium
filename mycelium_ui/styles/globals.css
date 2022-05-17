@@ -16,7 +16,7 @@ a {
 }
 
 .map-container {
-  height: 400px;
+  height: 600px;
 }
 
 .sidebar {
@@ -37,7 +37,7 @@ a {
     height: 15px;
     width: 15px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: rgb(166, 255, 0);
     cursor: pointer;
   }
   
