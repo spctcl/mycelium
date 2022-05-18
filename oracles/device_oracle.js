@@ -36,6 +36,16 @@ async function main() {
 
   const doc = await loadDocument(ceramic, process.env.DOCUMENT_STREAM_ID);
   console.log("doc: ", doc);
+  
+  const content = doc.content;
+  const deviceId = content.deviceId;
+  console.log("deviceId: ", deviceId);
+
+  const unit = content.sensorData[0].unit;
+  console.log("unit: ", unit);
+
+  const val = content.sensorData[0].value;
+  console.log("val: ", val);
 
   const provider = new ethers.providers.InfuraProvider("kovan", process.env.KOVAN_API_KEY);
   console.log("infura provider: ", provider);
@@ -53,10 +63,10 @@ async function main() {
   const dataVal = ethers.BigNumber.from("10");
   const data = await oracleContract.getData();
   console.log("data: ", data);
-  let dataUpdateResult = await oracleContract.setData(dataVal, "mmHg")
+
+  // Oracles are un
+  let dataUpdateResult = await oracleContract.setData(ethers.BigNumber.from(val), unit)
   console.log("dataUpdateResult: ", dataUpdateResult);
-  let res = dataUpdateResult.wait();
-  console.log("res: ", res);
 
 }
 
