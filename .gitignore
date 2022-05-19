@@ -1,3 +1,7 @@
+# Hardhat
+hardhat/artifacts*
+hardhat/deployments
+
 # Dependencies
 **/node_modules
 /node_modules
