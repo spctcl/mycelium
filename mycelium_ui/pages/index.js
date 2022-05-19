@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 import OpenWeather from '../components/OpenWeather/OpenWeather';
 import DeviceData from '../components/DeviceData';
 // import StaticMap from '@mapbox/mapbox-sdk/services/static';
+// import ReactViewer from '../components/MapViewer/ReactMapViewer';
+import ReactMapV2 from '../components/MapViewer/ReactMapV2';
 
 export default function Home() {
   return (
@@ -12,10 +14,11 @@ export default function Home() {
         <Spacer y={1} />
        
           <MapViewer />
+          
             <Spacer y={4} />
+            <ReactMapV2 />
               <OpenWeather />
                 <DeviceData />
-                {/* <StaticMap /> */}
       </Container>
     </div>
   )

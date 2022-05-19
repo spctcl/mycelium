@@ -39,5 +39,13 @@ a {
     border-radius: 50%;
     background-color: rgb(166, 255, 0);
     cursor: pointer;
+    color: black;
   }
   
+
+
+  .popup .mapboxgl-popup-content {
+    background-color: rgb(1, 1, 126);
+    box-shadow: 10px 5px 5px whitesmoke;
+    border-style: groove;
+  }

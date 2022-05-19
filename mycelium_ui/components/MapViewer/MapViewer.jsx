@@ -5,7 +5,6 @@ import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-load
 import { useTheme, Container, Text, Spacer } from '@nextui-org/react';
 import mbxGeocoding from '@mapbox/mapbox-sdk/services/geocoding';
 
-// import iotDevicePoints from './DeviceConstant.geojson';
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjam51cjBhcWwwN2RyM3dudngzeXZ0cHB6In0.kma6XOVomvu4FAmhOTzllQ';
@@ -27,28 +26,36 @@ export default function App() {
   const { theme } = useTheme();
 
 
-// const iotDevice = {
-//     "type": "FeatureCollection",
-//     "features": [
-//       { "type": "Feature", "properties": { "Name": "VA Medical Center -- Leestown Division", "Address": "XXXXX Whispering Oaks" }, "geometry": { "type": "Point", "coordinates": [ -97.7426, 30.53041 ] } }
-//     ]};
+  const data = [
+    {
+      "deviceId": "0001",
+      "sensorData": {
+              "unit": "wfv",
+              "value": 100.0
+          },    
+      "sensorLocation": [-97.7428, 30.5303]
+  },
+  ]
 
-//     map.on('load', () => {
-//         map.addLayer({
-//           id: 'iotDevice',
-//           type: 'symbol',
-//           source: {
-//             type: 'geojson',
-//             data: iotDevice,
-//     coordinates: [ -97.7426, 30.53041 ]
-//           },
-//           layout: {
-//             'icon-image': 'hospital-15',
-//             'icon-allow-overlap': true
-//           },
-//           paint: {}
-//         });
-//     });
+
+
+
+    // map.on('load', () => {
+    //     map.addLayer({
+    //       id: 'iotDevice',
+    //       type: 'symbol',
+    //       source: {
+    //         type: 'geojson',
+    //         data: data,
+    // coordinates: [ -97.7426, 30.53041 ]
+    //       },
+    //       layout: {
+    //         'icon-image': 'hospital-15',
+    //         'icon-allow-overlap': true
+    //       },
+    //       paint: {}
+    //     });
+    // });
         
 
 
@@ -64,6 +71,15 @@ export default function App() {
       
     });
 
+
+    // device.forEach((deviceId) => {
+    //   console.log(deviceId)
+    //   var marker = new mapboxgl.Marker()
+    //       // .setLngLat([-97.742621, 30.5304821])
+    //       .setLngLat(data.sensorLocation)
+    //       // .setHTML('<h4>' + deviceId + '</h4>' + deviceId.sensorLocation)
+    //       .addTo(map.current)
+    // })
     // const marker = new mapboxgl.Marker()
     // // .setLngLat([-97.742621, 30.5304821])
     // .setLngLat([-97.7421, 30.5307])
