@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 
 import MapViewer from '../components/MapViewer/Mapviewer'
+import OpenWeather from '../components/OpenWeather/OpenWeather'
 // import './MapViewerStyles.css';
 
 export default function Home() {
@@ -22,10 +23,12 @@ export default function Home() {
       <main className={styles.main}>
         
         <MapViewer />
-        <h1 className={styles.title}>
+        <div>
+         <h1 className={styles.title}>
           Welcome to Mycelium!
-        </h1>
-
+          </h1>
+        </div>
+        <OpenWeather />
 
 
         <p className={styles.description}>
