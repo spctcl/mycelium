@@ -1,17 +1,18 @@
 import React from 'react';
-import { Container } from '@nextui-org/react';
+import { Container, Card } from '@nextui-org/react';
 
 
 const BgAnimation = () => (
   
   <Container>
+    <Card css={{ mw: "200px" }}>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g opacity="0.90">
+      <g opacity="1">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -362,6 +363,7 @@ const BgAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
+    </Card>
   </Container>
 );
 

@@ -16,7 +16,7 @@ a {
 }
 
 .map-container {
-  height: 600px;
+  height: 400px;
 }
 
 .sidebar {
@@ -35,17 +35,19 @@ a {
 
   .marker {
     height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: rgb(166, 255, 0);
+    width: 20px;
+    border-radius: 35%;
+    background-color: rgb(123, 0, 255);
     cursor: pointer;
     color: black;
+    box-shadow: 5px 2px 2px orange;
+    border-style: groove;
   }
   
 
 
   .popup .mapboxgl-popup-content {
     background-color: rgb(1, 1, 126);
-    box-shadow: 10px 5px 5px whitesmoke;
+    box-shadow: 5px 2px 5px whitesmoke;
     border-style: groove;
   }

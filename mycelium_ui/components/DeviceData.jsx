@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Spacer, Table, Text } from '@nextui-org/react'
+import { Container, Spacer, Table, Text, Card} from '@nextui-org/react'
 
 
 
@@ -47,8 +47,9 @@ const DeviceData = () => {
   return (
       
 <Container fluid>
-    <Spacer y={2} />
-        <Text size="2em">Mycelium IoT Device Data</Text>
+  <Card>
+    <Spacer y={1} />
+        <Text size="2em">IoT Device Data</Text>
     <Table
       aria-label="Example table with dynamic content"
       css={{
@@ -70,6 +71,7 @@ const DeviceData = () => {
         )}
         </Table.Body>
         </Table>
+  </Card>
 </Container>
     )
 }
