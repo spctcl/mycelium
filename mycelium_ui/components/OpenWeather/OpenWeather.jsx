@@ -29,10 +29,10 @@ useEffect(() => {
   };
   
 
-//using imperial units hard coding instead
-  // const kelvinToFarenheit = (k) => {
-  //   return (k - 273.15).toFixed(2);
-  // };
+// using imperial units hard coding instead
+  const kelvinToFarenheit = (k) => {
+    return (k - 273.15).toFixed(2);
+  };
 
 
 
@@ -66,11 +66,11 @@ useEffect(() => {
         <WeatherButton  onClick={submitHandler}/>       
 {/* openWeather call only once per 10 min so hard coded with this if needed during testing */}
    
-    {/* <Text h3 ><strong>Location:</strong> {getState}</Text>
+    <Text h3 ><strong>Location:</strong> {getState}</Text>
     <Text h3><strong>Degrees:</strong> {kelvinToFarenheit(378)}&#730; F</Text> 
-    <Text h3><strong>Relative Humidity:</strong> 70 % </Text> */}
+    <Text h3><strong>Relative Humidity:</strong> 70 % </Text>
 
-        <p>
+        {/* <p>
           <Text h3 >Location: {apiData.name}</Text>
         </p>
         <p>
@@ -78,7 +78,7 @@ useEffect(() => {
         </p>
         <p> 
           <Text h3>Relative Humidity: {apiData.main.humidity} % </Text>
-        </p> 
+        </p>  */}
            
        </Card>    
     </Container>

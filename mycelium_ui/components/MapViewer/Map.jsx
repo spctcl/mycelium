@@ -401,7 +401,7 @@ const data = {
             'layout': {},
             'paint': {
             'fill-color': '#feb236',
-            'fill-opacity': 0.2,
+            'fill-opacity': 0.33,
             
             }
         })
