@@ -1,3 +1,7 @@
+# Root
+artifacts/
+cache/
+
 # Hardhat
 hardhat/artifacts*
 hardhat/cache*
