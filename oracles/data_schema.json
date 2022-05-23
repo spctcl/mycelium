@@ -11,7 +11,7 @@
         "sensorData": {
             "description": "Measurements taken by the device sensors",
             "type": "array",
-            "output": {
+            "items": {
                 "type": "object",
                 "properties": {
                     "unit": {
@@ -28,7 +28,7 @@
             "description": "Point for a device's location using lat, lon coordinates.",
             "type": "array",
             "items": {
-                "type": "number",
+                "type": "number"
             },
             "maxItems": 2,
             "minItems": 2
