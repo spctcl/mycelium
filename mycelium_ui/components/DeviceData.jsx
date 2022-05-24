@@ -3,7 +3,10 @@ import { Container, Spacer, Table, Text, Card} from '@nextui-org/react'
 
 
 
-const DeviceData = () => {
+const DeviceData = (props) => {
+  const data = props.data ? props.data : "test";
+  console.log(`data: ${data.value}`);
+
   const columns = [
     {
       key: "deviceName",
@@ -18,6 +21,10 @@ const DeviceData = () => {
       label: "Temperature",
     },
     {
+      key: "soil_moisture",
+      label: "Soil Moisture"
+    },
+    {
       key: "rH",
       label: "Relative Humidity",
     },
@@ -25,12 +32,14 @@ const DeviceData = () => {
       label: "Status"
     },
   ];
+  
   const rows = [
     {
       key: "1",
       deviceName: "IoT Device #1",
       coordinates: "30 (Lat), -97 (Long)",
       temperature: "97 (F)",
+      soil_moisture: `${data.value} (${data.unit})`,
       rH: "85%",
       status: "Active",
     },
@@ -39,6 +48,7 @@ const DeviceData = () => {
       deviceName: "IoT Device #2",
       coordinates: "30 (Lat), -97 (Long)",
       temperature: "92 (F)",
+      soil_moisture: `${data.value} (${data.unit})`,
       rH: "80%",
       status: "Active",
     }
