@@ -6,7 +6,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken= 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjbDNmcWd2bHUwYWxwM2RxaWZtM25rY3F6In0.25nCNet65mYO0Ln3Wk9EEQ'; 
 
-// mapboxgl.accessToken= process.env.REACT_APP_MAPBOX_API_KEY;
+// mapboxgl.accessToken= process.env.REACT_APP_MAPBOX_API_KEY ?? '';
 
 const data = {
     "features": [
@@ -243,6 +243,9 @@ const data = {
     }
 
     componentDidMount(){
+
+      // mapboxgl.accessToken=process.env.REACT_APP_MAPBOX_API_KEY
+
         const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/multiversemuffin/cl2r8oppl003914pb85ph5vx7',
