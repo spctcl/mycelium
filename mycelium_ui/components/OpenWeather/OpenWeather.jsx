@@ -5,7 +5,7 @@ import WeatherButton from './WeatherButton'
 
 const OpenWeather = () => {
  
-  const apiKey = process.env.REACT_APP_API_KEY;
+  const apiKey = process.env.OPENWEATHER_API_KEY;
 
 const [apiData, setApiData] = useState({});
 const [getState, setGetState] = useState('');

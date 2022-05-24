@@ -2,8 +2,11 @@ import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { Text, Row, Grid, Container, Spacer } from '@nextui-org/react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+// import ReactMapGL from 'react-map-gl';
 
-mapboxgl.accessToken= 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjbDNmcWd2bHUwYWxwM2RxaWZtM25rY3F6In0.25nCNet65mYO0Ln3Wk9EEQ';
+mapboxgl.accessToken= 'pk.eyJ1IjoibXVsdGl2ZXJzZW11ZmZpbiIsImEiOiJjbDNmcWd2bHUwYWxwM2RxaWZtM25rY3F6In0.25nCNet65mYO0Ln3Wk9EEQ'; 
+
+// mapboxgl.accessToken= process.env.REACT_APP_MAPBOX_API_KEY;
 
 const data = {
     "features": [
@@ -235,8 +238,7 @@ const data = {
         this.state = { 
             lng: -97.7428,
             lat: 30.5303,
-            zoom: 14.65    
-
+            zoom: 14.65           
         }
     }
 
@@ -340,11 +342,6 @@ const data = {
 
 
 
-
-
-
-
-
         map.on('load', function () {
             map.addSource('locationBoundaries', {
             'type': 'geojson',
@@ -423,16 +420,6 @@ const data = {
           .setHTML('<h3>' + 'Device ID: ' + marker.deviceId + '</h3>' + '<h4>' + 'Temperature: ' + marker.value + '</h4>' + '<h4>' + 'Degrees: ' + marker.unit + '</h4>' + '<h4>' + 'Location: ' + marker.coordinates + '</h5>' + '<h4>' + 'RelativeHumidity: ' + marker.rHumidity + '</h5>'))
         .addTo(map);
         }
-
-
-
-
-
-
-    
-
-
-
 
     }
 
