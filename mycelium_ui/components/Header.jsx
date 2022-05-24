@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-import BgAnimation from './BgAnimation';
 
 export default function Header(props) {
     return (
@@ -66,25 +65,10 @@ export default function Header(props) {
               </Grid>
             </Grid.Container>
           </Row>
-          
-
-         
-       
-
-
-          {/* <Row>
-            <Grid.Container>
-              <Grid sm>
-                <BgAnimation style={{justify: "center"}} />
-              </Grid>
-            </Grid.Container>
-          </Row> */}
-
-
           <Row align="center">
             <Grid.Container>
               <Grid>
-            <Text h2 size={25}>
+            <Text h2 size={25} >
               Decentralized IoT Network
             </Text>
             </Grid>
