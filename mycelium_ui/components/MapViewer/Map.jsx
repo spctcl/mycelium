@@ -243,8 +243,6 @@ const data = {
 
     componentDidMount(){
 
-      // mapboxgl.accessToken=process.env.REACT_APP_MAPBOX_API_KEY
-
         const map = new mapboxgl.Map({
             container: this.mapContainer,
             style: 'mapbox://styles/multiversemuffin/cl2r8oppl003914pb85ph5vx7',

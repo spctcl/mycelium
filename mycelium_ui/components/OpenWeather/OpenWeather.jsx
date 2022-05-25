@@ -71,7 +71,8 @@ useEffect(() => {
     <Text h3><strong>Relative Humidity:</strong> 70 % </Text>
 
         {/* <p>
-          <Text h3 >Location: {apiData.name}</Text>
+        //reduce API call be calling Location from Input
+          <Text h3 >Location: {getState}</Text>
         </p>
         <p>
           <Text h3>Degrees: {apiData.main.temp} F</Text> 
