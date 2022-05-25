@@ -1,12 +1,10 @@
 import React from 'react'
 import { Container, Spacer, Table, Text, Card} from '@nextui-org/react'
-import DeviceData from '../components/DeviceData'
-import 
-
+// import Form from './api/form'
 
 function Data() { return (
   <Container>
-   <DeviceData />
+   {/* <Form /> */}api/form data imported here.
   </Container>
 )
   }
