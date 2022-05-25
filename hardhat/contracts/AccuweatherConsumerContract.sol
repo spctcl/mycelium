@@ -138,8 +138,6 @@ contract AccuweatherConsumer is ChainlinkClient {
         req.add("endpoint", "location"); // NB: not required if it has been hardcoded in the job spec
         req.add("lat", _lat);
         req.add("lon", _lon);
-        req.add("temperature, _temp);
-        req.add(("value, _value);
 
         bytes32 requestId = sendChainlinkRequest(req, _payment);
 

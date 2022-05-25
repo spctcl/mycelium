@@ -1,6 +1,17 @@
+# Root
+artifacts/
+cache/
+
+# Hardhat
+hardhat/artifacts*
+hardhat/cache*
+hardhat/deployments
+
+
 # Dependencies
 **/node_modules
 /node_modules
 
-# Misc
+# Secrets
+*.txt
 .env*
