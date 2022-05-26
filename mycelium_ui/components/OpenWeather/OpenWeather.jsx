@@ -50,8 +50,8 @@ useEffect(() => {
      <Spacer y={4} />
      
         {/* <Spacer y={1} /> */}
-       <Text color="black"
-         >
+       <Text placeholder='Enter major U.S. city here'
+         >Enter major U.S. city here: <br />
         <input
             type="text"
             id="location-name"
