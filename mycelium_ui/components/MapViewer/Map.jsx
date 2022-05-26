@@ -7,263 +7,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken= process.env.NEXT_PUBLIC_ENV_REACT_APP_MAPBOX_API_KEY;
 
-// const data = {
-//   "features": [
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74244308471678,
-//           30.5300137344467
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74259328842163,
-//           30.530475804562
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74266302585602,
-//           30.53037877002008
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74275958538055,
-//           30.530480425252044
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.7423357963562,
-//           30.530619045851502
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74272203445435,
-//           30.53092863114277
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.7429848909378,
-//           30.53121973283015
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74575293064117,
-//           30.53143690336212
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.7460265159607,
-//           30.531501592362932
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74684727191925,
-//           30.531885104840047
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74654150009155,
-//           30.53257819583764
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74472832679749,
-//           30.53219930670504
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74389147758484,
-//           30.53291087776003
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74447619915007,
-//           30.53268908993836
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74392366409302,
-//           30.533169629578634
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.73994863033295,
-//           30.531249767081583
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74032682180403,
-//           30.531406869168546
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74008810520172,
-//           30.531346800753532
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.7407157421112,
-//           30.53096559648477
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.73996204137802,
-//           30.529603067787203
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74117976427078,
-//           30.52970183587651
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74620890617369,
-//           30.530300218177068
-//         ]
-//       }
-//     },
-//     {
-//       "type": "Feature",
-//       "properties": {},
-//       "geometry": {
-//         "type": "Point",
-//         "coordinates": [
-//           -97.74623036384581,
-//           30.53053125282814
-//         ]
-//       }
-//     }
-//   ]
-// }
 
 const data = {
     "features": [
@@ -318,14 +61,16 @@ const data = {
 },
 {
     "deviceId": "008",
-    "coordinates": [-97.7434, 30.53085],
+    "coordinates": [ -97.7423357963562,
+      30.530619045851502],
     "value": "105",
     "rHumidity": "85%",
     "unit": "Fahrenheit"
 },
 {
     "deviceId": "009",
-    "coordinates": [-97.7434, 30.53109],
+    "coordinates": [ -97.74266302585602,
+      30.53037877002008],
     "value": "105",
     "rHumidity": "85%",
     "unit": "Fahrenheit"
@@ -339,7 +84,8 @@ const data = {
 },
 {
     "deviceId": "011",
-    "coordinates": [-97.7434, 30.53087],
+    "coordinates": [ -97.74275958538055, 30.530480425252044
+],
     "value": "105",
     "rHumidity": "85%",
     "unit": "Fahrenheit"
