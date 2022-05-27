@@ -65,6 +65,8 @@ export default function Home(props) {
     setCeramicData({value: sensorData.value, unit: sensorData.unit});
   };
 
+  console.log("index.js: ceramicData: ", ceramicData);
+
   // Fetch the Ceramic data.
   useEffect(() => {
     (async () => {
@@ -99,8 +101,8 @@ export default function Home(props) {
         <Map />
         <OpenWeather />
         <Spacer y={4} />
-        <DeviceData data={ceramicData != undefined ? ceramicData : ""}/>
-        <DeviceData data={oracleData != undefined ? oracleData : ""} />
+        <DeviceData title={"My Devices"} data={ceramicData != undefined ? ceramicData : ""}/>
+        <DeviceData title={"Community Devices"} data={oracleData != undefined ? oracleData : ""} />
       </Container>
     </div>
   );
