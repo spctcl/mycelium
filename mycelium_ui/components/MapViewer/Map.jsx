@@ -7,6 +7,17 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 mapboxgl.accessToken= process.env.NEXT_PUBLIC_ENV_REACT_APP_MAPBOX_API_KEY;
 
+const data2 = {
+  "features": [
+  {
+  "deviceId": "001",
+  "coordinates": [-97.7425, 30.5302],
+  "value": "110",
+  "rHumidity": "85%",
+  "unit": "Fahrenheit"
+}]}
+
+
 
 const data = {
     "features": [
@@ -15,7 +26,8 @@ const data = {
     "coordinates": [-97.7425, 30.5300],
     "value": "110",
     "rHumidity": "85%",
-    "unit": "Fahrenheit"
+    "unit": "Fahrenheit",
+    "owner": "main"
 },
 {
     "deviceId": "002",
@@ -402,7 +414,7 @@ const data = {
             'layout': {},
             'paint': {
             'fill-color': '#feb236',
-            'fill-opacity': 0.33,
+            'fill-opacity': 0.43,
             
             }
         })
@@ -416,6 +428,12 @@ const data = {
         // el.style.backgroundImage = `url(https://placekitten.com/g/${width}/${height}/)`;
         
         el.style.backgroundSize = '100%';
+
+
+
+        // useEffect(() => {
+        //   if (marker.include?(data.owner.main))
+        // })
          
         // Add markers to the map.
         new mapboxgl.Marker(el)
@@ -425,6 +443,79 @@ const data = {
           '<h4>' + 'RelativeHumidity: ' + marker.rHumidity + '</h4>'))
         .addTo(map);
         }
+
+
+
+
+      // for (const marker2 of data2.features) {
+      //     // Create a DOM element for each marker.
+      //     const el = document.createElement('div');
+      //     el.className = 'marker2';
+      //     el.style.backgroundSize = '100%';
+           
+      //     // Add markers to the map.
+      //     new mapboxgl.Marker(el)
+      //     .setLngLat(marker2.coordinates)
+      //           .setPopup(new mapboxgl.Popup({ offset: 40, className: "popup"})
+      //       .setHTML('<h3>' + 'Device ID: ' + marker2.deviceId + '</h3>' + '<h4>' + 'Temperature: ' + marker2.value + '</h4>' + '<h4>' + 'Degrees: ' + marker2.unit + '</h4>' + '<h4>' + '<h4>' + 'RelativeHumidity: ' + marker2.rHumidity + '</h4>'))
+      //     .addTo(map);
+      //     }
+
+
+      map.on('idle', () => {
+        // If these two layers were not added to the map, abort
+        if (!map.getLayer('property') ) {
+        return;
+        }
+         
+        // Enumerate ids of the layers.
+        const toggleableLayerIds = ['property'];
+         
+        // Set up the corresponding toggle button for each layer.
+        for (const id of toggleableLayerIds) {
+        // Skip layers that already have a button set up.
+        if (document.getElementById(id)) {
+        continue;
+        }
+         
+        // Create a link.
+        const link = document.createElement('a');
+        link.id = id;
+        link.href = '#';
+        link.textContent = id;
+        link.className = 'active';
+         
+        // Show or hide layer when the toggle is clicked.
+        link.onclick = function (e) {
+        const clickedLayer = this.textContent;
+        e.preventDefault();
+        e.stopPropagation();
+         
+        const visibility = map.getLayoutProperty(
+        clickedLayer,
+        'visibility'
+        );
+         
+        // Toggle layer visibility by changing the layout object's visibility property.
+        if (visibility === 'visible') {
+        map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+        this.className = '';
+        } else {
+        this.className = 'active';
+        map.setLayoutProperty(
+        clickedLayer,
+        'visibility',
+        'visible'
+        );
+        }
+        };
+         
+        const layers = document.getElementById('menu');
+        layers.appendChild(link);
+        }
+        });
+
+
 
     }
 
@@ -439,6 +530,7 @@ const data = {
                     <div className="sidebar">
                     Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom: {this.state.zoom}
                     </div>
+                    <nav id="menu"></nav>
                 </div> 
             </Container>
          )

@@ -5,13 +5,16 @@ import WeatherButton from './WeatherButton'
 
 const OpenWeather = () => {
  
-  const apiKey = process.env.OPENWEATHER_API_KEY;
+  const API_KEY = process.env.NEXT_PUBLIC_ENV_OPENWEATHER_API_KEY;
 
-const [apiData, setApiData] = useState({});
-const [getState, setGetState] = useState('');
-const [state, setState] = useState('austin');
+  const [apiData, setApiData] = useState({});
+  const [getState, setGetState] = useState('');
+  const [state, setState] = useState('Austin');
+  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=${API_KEY}&units=imperial`;
+  
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=fcb2ab3f851ed0e9ad74b174176a9a6e&units=imperial`;
 
+console.log(apiData.main)
   
 useEffect(() => {
     fetch(apiUrl)
@@ -67,11 +70,10 @@ useEffect(() => {
 {/* openWeather call only once per 10 min so hard coded with this if needed during testing */}
    
     <Text h3 ><strong>Location:</strong> {getState}</Text>
-    <Text h3><strong>Degrees:</strong> {kelvinToFarenheit(378)}&#730; F</Text> 
+    <Text h3><strong>Degrees:</strong> {kelvinToFarenheit(370)}&#730; F</Text> 
     <Text h3><strong>Relative Humidity:</strong> 70 % </Text>
 
         {/* <p>
-        //reduce API call be calling Location from Input
           <Text h3 >Location: {getState}</Text>
         </p>
         <p>
