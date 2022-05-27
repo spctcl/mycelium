@@ -34,7 +34,7 @@ const DeviceData = (props) => {
   const rows = [
     {
       key: "1",
-      deviceName: "IoT Device #1",
+      deviceName: "Device 1",
       coordinates: "30 (Lat), -97 (Long)",
       temperature: "97 (F)",
       soil_moisture: `${data.value} (${data.unit})`,
@@ -43,7 +43,7 @@ const DeviceData = (props) => {
     },
     {
       key: "2",
-      deviceName: "IoT Device #2",
+      deviceName: "Device 2",
       coordinates: "30 (Lat), -97 (Long)",
       temperature: "92 (F)",
       soil_moisture: `${data.value} (${data.unit})`,
@@ -57,7 +57,7 @@ const DeviceData = (props) => {
 <Container fluid>
   <Card>
     <Spacer y={1} />
-        <Text size="2em">IoT Device Data</Text>
+        <Text size="2em">My Devices</Text>
     <Table
       aria-label="Example table with dynamic content"
       css={{
