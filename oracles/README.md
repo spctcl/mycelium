@@ -1,6 +1,4 @@
- # Mycelium
- 
- # Mycelium Oracle Services
+ # Mycellium Oracle Services
  ##
  ## Ceramic
  ##
@@ -16,9 +14,3 @@
 ```
 #
 ## Run Oracle Services:
-```
-    cd oracles
-    node device_oracle.js
-```
-
-## 

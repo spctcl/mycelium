@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Data",
+    "type": "object",
+    "description": "Data from a Mycellium-compatible device",
+    "properties": {
+        "deviceId": {
+            "description": "ID of the device that produced this data",
+            "type": "string"
+        },
+        "sensorData": {
+            "description": "Measurements taken by the device sensors",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "unit": {
+                        "type": "string"
+                    },
+                     "value": {
+                         "type": "number"
+                     }
+                }
+            },
+            "required": [ "unit", "value" ]
+        },
+        "sensorLocation": {
+            "description": "Point for a device's location using lat, lon coordinates.",
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2
+        }
+    },
+    "required": [ "deviceId", "sensorData", "sensorLocation" ]
+}
