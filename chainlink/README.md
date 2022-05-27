@@ -1,5 +1,8 @@
 # Instructions for Chainlink Config and Deployment
 
+<<<<<<< HEAD
+### ...
+=======
 
 
 ## Accuweather Info
@@ -48,3 +51,4 @@ https://openweathermap.org/api
 
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={ APIKEY }
 
+>>>>>>> development

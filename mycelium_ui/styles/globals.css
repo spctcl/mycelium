@@ -15,14 +15,9 @@ a {
   box-sizing: border-box;
 }
 
-
 .map-container {
   height: 400px;
-  padding: 6px 12px;
-  margin: 50px;
-  border-radius: 4px;
 }
-
 
 .sidebar {
   background-color: rgba(35, 55, 75, 0.9);
@@ -30,9 +25,29 @@ a {
   padding: 6px 12px;
   font-family: monospace;
   z-index: 1;
-  position: center;
+  position: relative;
   top: 0;
   left: 0;
-  margin: 12px;
+  margin: 4px;
   border-radius: 4px;
+  }
+
+
+  .marker {
+    height: 15px;
+    width: 20px;
+    border-radius: 35%;
+    background-color: rgb(123, 0, 255);
+    cursor: pointer;
+    color: black;
+    box-shadow: 5px 2px 2px orange;
+    border-style: groove;
+  }
+  
+
+
+  .popup .mapboxgl-popup-content {
+    background-color: rgb(1, 1, 126);
+    box-shadow: 5px 2px 5px whitesmoke;
+    border-style: groove;
   }
