@@ -1,6 +1,6 @@
 # Root
-artifacts/
-cache/
+artifacts
+cache
 
 # Hardhat
 hardhat/artifacts*
@@ -15,3 +15,4 @@ hardhat/deployments
 # Secrets
 *.txt
 .env*
+
