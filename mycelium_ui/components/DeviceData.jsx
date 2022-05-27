@@ -1,8 +1,6 @@
 import React from 'react'
 import { Container, Spacer, Table, Text, Card} from '@nextui-org/react'
 
-
-
 const DeviceData = (props) => {
   const data = props.data ? props.data : "test";
   console.log(`data: ${data.value}`);
