@@ -15,7 +15,7 @@
 #
 
 ## Mycelium Oracle Services
-## Mycelium Oracle Services use Ceramic for distributed storage.
+### Mycelium Oracle Services use Ceramic and IPFS for distributed storage.
 ## Run Oracle Services:
 ```
     cd oracles
