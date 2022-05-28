@@ -1,14 +1,14 @@
 import { Container, Spacer, Table, Text, Card, Grid} from '@nextui-org/react'
-import {Card1} from './marketplacedata'
-import {Card2} from './marketplacedata2'
+import MarketplaceCard1 from '../components/MarketplaceCard1'
+import MarketplaceCard2 from '../components/MarketplaceCard2'
 export default function Marketplace() {
   return (
     <Grid.Container gap={2} justify="center">
       <Grid xs={12} sm={4}>
-        <Card1 />
+        <MarketplaceCard1 />
       </Grid>
       <Grid xs={12} sm={4}>
-        <Card2 />
+        <MarketplaceCard2 />
       </Grid>
     </Grid.Container>
   );

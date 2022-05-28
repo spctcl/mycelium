@@ -1,11 +1,12 @@
 import { Card, Col, Text } from "@nextui-org/react";
 
-export const Card1 = () => (
-  <Card width="100%" bordered cover hoverable clickable shadow={false} >
+export default function MarketplaceCard2() {
+  return (
+    <Card width="100%" bordered cover hoverable clickable shadow={false} >
     <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#ffffffAA">
-          IoT Devices and Sensors
+          Devices and Sensors
         </Text>
         <Text h4 color="white">
           A variety of boards and sensors to cover your needs
@@ -20,3 +21,4 @@ export const Card1 = () => (
     />
   </Card>
 );
+}
