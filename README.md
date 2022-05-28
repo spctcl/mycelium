@@ -1,6 +1,6 @@
  # Mycelium
  ## Description
- ### Like the fungal filaments that connect and nourish the forest, Mycelium empowers growers with distributed environmental sensing for better harvests.<br><br>
+ Like the fungal filaments that connect and nourish the forest, Mycelium empowers growers with distributed environmental sensing for better harvests.<br><br>
  # Getting Started with Ceramic, Oracle Service and the UI.
  # Ceramic
  ##
