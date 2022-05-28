@@ -1,3 +1,4 @@
+import { Button } from '@nextui-org/react'
 export default function Authenticate(props) {
     const infuraId = process.env.INFURA_ID;
     

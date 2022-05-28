@@ -124,24 +124,28 @@ const DeviceData = (props) => {
 
   const [rows, setRows] = useState(rowsArr);
 
+  const [index, setIndex] = useState(0);
+  const [oldVal, setOldVal] = useState();
+
   console.log("data.deviceNum: ", data.deviceNum);
   console.log("rows: ", rows[1]);
 
   // Random number here.
   useEffect(() => {
-    if (data != undefined) {
-      const deviceNum = Math.floor(Math.random() * 6 + 1);
-      let index = deviceNum;
-      console.log("index: ", index);
-      setRows(
-        rows.map((row) => 
-          (parseInt(row.key) === index) 
-            ? { ...row, soil_moisture:`${data.value} (${data.unit})`}
-            : { ...row }
-        )
-      );
+    if (data !== undefined) {
+      if (oldVal !== data.value) {
+        setIndex(Math.floor(Math.random() * 6 + 1));
+        console.log("index: ", index);
+        setRows(
+          rows.map((row) => 
+            (parseInt(row.key) === index) 
+              ? { ...row, soil_moisture:`${data.value} (${data.unit})`}
+              : { ...row }
+          )
+        );
+        setOldVal(data.value)
+        }
     }
-
   });
 
   return (
