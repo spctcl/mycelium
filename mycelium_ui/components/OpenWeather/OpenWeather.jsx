@@ -10,9 +10,8 @@ const OpenWeather = () => {
   const [apiData, setApiData] = useState({});
   const [getState, setGetState] = useState('');
   const [state, setState] = useState('Austin');
-  // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=${API_KEY}&units=imperial`;
-  
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${state}&appid=fcb2ab3f851ed0e9ad74b174176a9a6e&units=imperial`;
+
+const apiUrl = process.env.NEXT_PUBLIC_ENV_LOCAL_OPENWEATHER_API_KEY
 
 console.log(apiData.main)
   
