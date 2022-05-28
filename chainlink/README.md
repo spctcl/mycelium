@@ -1,10 +1,5 @@
 # Instructions for Chainlink Config and Deployment
 
-<<<<<<< HEAD
-### ...
-=======
-
-
 ## Accuweather Info
 
 Testnet and Mainnet options for AccuWeather/Link contract:
@@ -50,5 +45,3 @@ curl -X GET "http://dataservice.accuweather.com/currentconditions/v1/351193?apik
 https://openweathermap.org/api
 
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={ APIKEY }
-
->>>>>>> development
