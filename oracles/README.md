@@ -1,16 +1,12 @@
- # Mycellium Oracle Services
- ##
- ## Ceramic
- ##
- #### Mycelium Oracle Services use Ceramic for distributed storage.
+# Mycellium Oracle Services
  
- ### Ceramic Installation:
-```
-    npm install --global @ceramicnetwork/cli @glazed/cli 
-```
- ## Run Ceramic:
-```
-    ceramic daemon
-```
-#
 ## Run Oracle Services:
+```
+    cd oracles
+    node device_oracle.js
+```
+
+# Mycelium UI
+```
+    yarn dev
+```
