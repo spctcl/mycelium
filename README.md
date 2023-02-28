@@ -1,4 +1,5 @@
- # Mycelium
+ # Mycelium - [Chainlink Spring 2022 Hackathon Top Quality Winner](https://chain.link/hackathon/hackathon-spring-2022)
+
  ## Description
  Like the fungal filaments that connect and nourish the forest, Mycelium empowers growers with distributed environmental sensing for better harvests.<br><br>
  ## Getting Started with Ceramic, Oracle Service and the UI
